@@ -7,6 +7,7 @@ for i in range(0, teste):
   jogos.append(numeros)
   banco.append(jogos)
 
+numeros.sort()
 quant_jogos = 0
 for passando in banco:
  quant_jogos += 1

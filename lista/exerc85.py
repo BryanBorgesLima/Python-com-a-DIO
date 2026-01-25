@@ -1,24 +1,17 @@
-principal = []
-lista_par = []
-lista_impar = []
+principal = [[], []]
 
+aux = 0
 for p in range(0, 7):
-    principal.append(int(input(f'Coloque um nuemro na posição {p}°:  ')))
+    aux = (int(input(f'Coloque um nuemro na posição {p}°:  ')))
+    if aux % 2 == 0:
+     principal[0].append(aux)
+    else:
+       principal[1].append(aux)
     
+principal[0].sort()
+principal[1].sort()
 
-for par in principal:
-    if par % 2 == 0:
-        lista_par.append(par)
-    
-
-for impar in principal:
-    if impar % 2 != 0:
-        lista_impar.append(impar)
-   
-
-principal.append(lista_par[:])
-principal.append(lista_impar[:])
 
 print('~~~~' *30)
-print(f'Os numeros impares são {lista_impar}\n')
-print(f'Os numeros pares são {lista_par}')
+print(f'Os numeros impares são {principal[1]}\n')
+print(f'Os numeros pares são {principal[0]}')
